@@ -1,0 +1,38 @@
+body
+ {
+    width: 100vh;
+    height: 100vw;
+    margin: 0;
+	overflow: hidden;
+}
+#svelte {
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+    display: flex;
+    flex-direction:column;
+	overflow-y: scroll;
+}
+#svelte > main {
+    flex-shrink: 0;
+}
+#svelte > footer {
+    margin-top: auto;
+}
+.form-wrapp {
+    width: 100%;
+    max-width: 400px;
+    padding: 2rem;
+    margin: auto;
+  }
+pre {
+	margin: 0 0 0 0;
+	padding: .5rem;
+	background-color: #f8f8f8;
+	color: #666;
+	border-radius: .5rem;
+	overflow-x: auto;
+}
+

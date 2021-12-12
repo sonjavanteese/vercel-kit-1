@@ -10,7 +10,15 @@
   "devDependencies": {
     "@sveltejs/adapter-auto": "next",
     "@sveltejs/kit": "next",
-    "svelte": "^3.44.0"
+    "@windicss/plugin-animations": "^1.0.9",
+    "svelte": "^3.44.0",
+    "svelte-preprocess": "^4.9.8",
+    "svelte-windicss-preprocess": "^4.2.5",
+    "svelte2tsx": "^0.4.11",
+    "typescript": "^4.5.3"
   },
-  "type": "module"
+  "type": "module",
+  "dependencies": {
+    "@supabase/supabase-js": "^1.28.5"
+  }
 }
