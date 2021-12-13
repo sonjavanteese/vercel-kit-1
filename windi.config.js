@@ -19,6 +19,30 @@ export default defineConfig({
         blue: colors.sky,
         green: colors.emerald,
         pink: colors.fuchsia,
+        blueGray: {
+          50: '#f8fafc',
+          100: '#f1f5f9',
+          200: '#e2e8f0',
+          300: '#cbd5e1',
+          400: '#94a3b8',
+          500: '#64748b',
+          600: '#475569',
+          700: '#334155',
+          800: '#1e293b',
+          900: '#0f172a',
+        },
+        parker: {
+          50: '#579086',
+          100: '#4d867c',
+          200: '#437c72',
+          300: '#397268',
+          400: '#2f685e',
+          500: '#255e54',
+          600: '#1b544a',
+          700: '#114a40',
+          800: '#074036',
+          900: '#00362c'
+        },
       },
       fontFamily: {
         sans: ['Graphik', 'sans-serif'],
@@ -36,7 +60,7 @@ export default defineConfig({
     },
   },
   plugins: [
-   // require('daisyui'),
+    // require('daisyui'),
     plugin(({ addUtilities }) => {
       const newUtilities = {
         '.skew-10deg': {
