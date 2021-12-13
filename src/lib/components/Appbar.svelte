@@ -9,8 +9,8 @@
             <img src="https://nwp-cgn.de/img/poser/favicon.svg" alt="" width="auto"/>
         </a> 
         <div> 
-            <button on:click={toggle} class="navbar-burger"> 
-                <svg class="svg" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+            <button on:click={toggle} class="flex items-center justify-center"> 
+                <svg class="fill-current h-6 w-6" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                     <title>Mobile menu</title>
                     <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"></path>
                 </svg>
@@ -20,26 +20,6 @@
 </header>
 
 <style>
-    .font-semibold {
-    font-weight: 600;
-    }
-    .h-4 {
-    height: 1rem;
-    }
-    .text-3xl {
-    font-size: 1.875rem;
-    line-height: 2.25rem;
-    }
-    .leading-none {
-    line-height: 1;
-    }
-    .fill-current {
-    fill: currentColor;
-    }
-    .w-4 {
-    width: 1rem;
-    }
-
     header {
     background-color: var(--app-bar-bg);
     position: fixed;
@@ -68,47 +48,19 @@
     justify-content: space-between;
     padding-left: var(--app-bar-px-s);
     padding-right: var(--app-bar-px-s);
-    padding-top: var(--app-bar-py);
-    padding-bottom: var(--app-bar-py);
+    padding-top: 0;
+    padding-bottom: 0;
     min-height: var(--app-bar-height);
-    }
-    @media (min-width: 640px) {
-        nav {
-            padding-left: var(--app-bar-px-l);
-            padding-right: var(--app-bar-px-l);
-        }
     }
     img {
     height: 2.5rem;
     }
-.nav-burger {
-    border-radius: 0.25rem;
-    border-width: 1px;
-    border-style: solid;
-    border-color: var(--app-bar-bg);
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: -webkit-flex;
-    display: flex;
-    padding-top: 0.5rem;
-    padding-bottom: 0.5rem;
-    padding-left: 0.75rem;
-    padding-right: 0.75rem;
-    cursor: pointer;
-}
-.nav-burger:active {
-  outline: 2px solid transparent;
-  outline-offset: 2px;
-}
-.nav-burger:focus {
-  outline: 2px solid transparent;
-  outline-offset: 2px;
-}
-.nav-burger:hover {
-  --tw-text-opacity: 1;
-  color: rgba(249, 250, 251, var(--tw-text-opacity));
-}
-.svg {
-  @apply fill-current h-4 w-4;
-}
+    button {
+        @apply flex items-center justify-center border-0 rounded;
+        min-height: var(--app-bar-height);
+        min-width: var(--app-bar-height);
+    }
+    button:focus {
+        @apply outline-none;
+    }
 </style>

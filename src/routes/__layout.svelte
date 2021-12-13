@@ -15,14 +15,26 @@
 <Appbar bind:isOpen />
 
 
-<main>
+<main class="main">
  <slot /> 
 </main>
 
 
 <style windi:preflights:global windi:safelist:global global>
-
-
+  :global(body) {
+    font-family: Menlo, Consolas, Monaco, Liberation Mono, Lucida Console, monospace;
+  }
+  :root {
+      --app-bar-bgx: #255e54;
+      --app-bar-bg: #075985;;
+      --app-bar-color: #ffffff;
+      --app-bar-zindex: 30;
+      --app-bar-px-s: 1.5rem;
+      --app-bar-px-l: 2rem;
+      --app-bar-py: 0.2rem;
+      --app-bar-height: 66px;
+      --app-container-width: 576px;
+  }
   h1,
   h2,
   h3,
@@ -73,6 +85,9 @@
       border-radius: 0.5rem;
       overflow-x: auto;
   }
+  .main {
+    padding-top: var(--app-bar-height);
+  }
   .form-wrapp {
       width: 100%;
       max-width: 400px;
@@ -103,10 +118,12 @@
   }
 
   .page-container {
-    @apply min-h-full w-full max-w-xl mx-auto px-4 py-4 shadow;
+    @apply w-full mx-auto px-4;
+    max-width: var(--app-container-width);
   }
-  .head-container {
-    @apply w-full max-w-xl mx-auto px-4 py-4 shadow;
+  .page-container.full {
+    @apply w-full h-full mx-auto px-4 py-4 shadow;
+    max-width: var(--app-container-width);
   }
 
 </style>
