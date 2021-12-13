@@ -1,6 +1,8 @@
 import vercel from '@sveltejs/adapter-vercel';
-// import sveltePreprocess from 'svelte-preprocess';
 import { windi } from "svelte-windicss-preprocess";
+
+
+
 
 
 /** @type {import('@sveltejs/kit').Config} */
@@ -9,10 +11,9 @@ const config = {
 	    windi({})
 	],
 	kit: {
-		adapter: vercel(),
-
 		// hydrate the <div id="svelte"> element in src/app.html
-		target: '#svelte'
+		target: '#svelte',
+		adapter: vercel()
 	}
 };
 

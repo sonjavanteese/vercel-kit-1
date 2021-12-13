@@ -1,24 +1,21 @@
 {
-  "name": "vercel-kit-1",
+  "name": "nwp-vers2",
   "version": "0.0.1",
   "scripts": {
     "dev": "svelte-kit dev",
     "build": "svelte-kit build",
-    "package": "svelte-kit package",
     "preview": "svelte-kit preview"
   },
   "devDependencies": {
     "@sveltejs/adapter-vercel": "next",
     "@sveltejs/kit": "next",
-    "@windicss/plugin-animations": "^1.0.9",
-    "svelte": "^3.44.0",
-    "svelte-preprocess": "^4.9.8",
-    "svelte-windicss-preprocess": "^4.2.5",
-    "svelte2tsx": "^0.4.11",
-    "typescript": "^4.5.3"
+    "svelte": "^3.42.6",
+    "svelte-windicss-preprocess": "^4.1.7",
+    "windicss": "^3.2.1"
   },
   "type": "module",
   "dependencies": {
-    "@supabase/supabase-js": "^1.28.5"
+    "@supabase/supabase-js": "^1.28.1",
+    "daisyui": "^1.16.2"
   }
 }
