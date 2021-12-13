@@ -18,5 +18,5 @@ export const nwp_auth = writable(false);
 export const nwp_user = writable(null);
 export const nwp_profil = writable(null);
 export const alert = writable(null);
-
+export const user = writable(null);
 // import {count, page, nwp_auth, nwp_user, nwp_profil, isSb} from './lib/stores'

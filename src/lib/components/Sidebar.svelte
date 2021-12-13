@@ -1,7 +1,7 @@
 <script>
     import {fly, fade} from 'svelte/transition'
     import { navigating, page } from '$app/stores';
-    import {user} from '$lib/stores'
+    import {user} from '../stores'
     export let isOpen = false;
     let condition = true;
     let isUser;
@@ -14,10 +14,12 @@
     <aside class="navbar-menu fixed top-0 left-0 bottom-0 w-5/6 max-w-sm z-50"> 
         <div in:fade="{{duration: 300}}" out:fade="{{delay: 300, duration: 300}}" on:click="{toggle}" class="navbar-backdrop-1 fixed inset-0 bg-blueGray-800 opacity-50"></div>                 
         <nav transition:fly="{{duration: 400, x: -300}}" class="bg-white flex flex-col h-full overflow-y-auto relative w-full">
-            <header class="bg-parker-400 flex items-center mb-8 px-6 py-6 text-white"> <a class="mr-auto text-3xl font-semibold" href="#">  
-                <img class="h-10" src="https://nwp-cgn.de/img/poser/favicon.svg" alt="" width="auto"/></a> 
-                <button on:click={toggle} class="navbar-close-1"> 
-                    <svg class="h-6 w-6 cursor-pointer focus:outline-none focus:border-0 hover:text-gray-200" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <header class="flex items-center"> 
+                <a class="mr-auto text-3xl font-semibold" href="#">  
+                    <img class="h-10" src="https://nwp-cgn.de/img/poser/favicon.svg" alt="" width="auto"/>
+                </a> 
+                <button on:click={toggle} class="close-icon"> 
+                    <svg class="svg" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
                     </svg>
                 </button>                         
@@ -77,7 +79,7 @@
                     {:else}
                     <button class="btn btn-red w-full">Sign Out</button>
                    {/if}
-                    <!--  <a class="block px-4 py-3 mb-2 text-xs text-center text-blue-600 hover:text-blue-700 font-semibold leading-none border border-blue-200 hover:border-blue-300 rounded" href="#">Log In</a> -->
+                    
                 </div>                         
             </div>                                          
         </nav>
@@ -85,16 +87,51 @@
 {/if}
 
 <style>
-    .list a {
-        @apply flex items-center p-4 text-lg text-parker-500 hover:bg-green-50 hover:text-parker-600 rounded-lg;
-    }
-    .list a.active {
-        @apply bg-green-50 text-parker-600;
-    }
-    .button {
-        @apply block w-full px-4 py-4 mb-3 text-xs text-center font-semibold leading-none bg-red-600 hover:bg-red-700 text-white rounded;
-    }
-    .link {
-        @apply block px-4 py-4 mb-3 text-xs text-center font-semibold leading-none bg-blue-600 hover:bg-blue-700 text-white rounded;
-    }
+
+  header {
+    background-color: var(--app-bar-bg);
+    --tw-shadow-color: 0, 0, 0;
+    --tw-shadow: 0 20px 25px -5px rgba(var(--tw-shadow-color), 0.1), 0 10px 10px -5px rgba(var(--tw-shadow-color), 0.04);
+    -webkit-box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+    color: var(--app-bar-color);
+    padding-left: var(--app-bar-px-s);
+    padding-right: var(--app-bar-px-s);
+    padding-top: var(--app-bar-py);
+    padding-bottom: var(--app-bar-py);
+    min-height: var(--app-bar-height);
+  }
+  .close-icon {
+    border-width: 0px;
+    cursor: pointer;
+  }
+  .close-icon:active {
+    border-width: 0px;
+    outline: 2px solid transparent;
+    outline-offset: 2px;
+  }
+  .close-icon:focus {
+    border-width: 0px;
+    outline: 2px solid transparent;
+    outline-offset: 2px;
+  }
+  .close-icon:hover {
+    --tw-text-opacity: 1;
+    color: rgba(249, 250, 251, var(--tw-text-opacity));
+  }
+  .svg {
+    height: 1.5rem;
+    width: 1.5rem;
+  }
 </style>
+<!--
+  /* :root {
+  --app-bar-bg: #255e54;
+  --app-bar-color: #ffffff;
+  --app-bar-zindex: 30;
+  --app-bar-px-s: 1rem;
+  --app-bar-px-l: 2rem;
+  --app-bar-py: 0.2rem;
+  --app-bar-height: 66px;
+} */
+-->
