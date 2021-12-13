@@ -21,18 +21,8 @@
 
 
 <style windi:preflights:global windi:safelist:global global>
-  :global(body) {
-    font-family: Menlo, Consolas, Monaco, Liberation Mono, Lucida Console, monospace;
-  }
-  :root {
-      --app-bar-bg: #255e54;
-      --app-bar-color: #ffffff;
-      --app-bar-zindex: 30;
-      --app-bar-px-s: 1rem;
-      --app-bar-px-l: 2rem;
-      --app-bar-py: 0.2rem;
-      --app-bar-height: 66px;
-  }
+
+
   h1,
   h2,
   h3,

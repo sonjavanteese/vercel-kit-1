@@ -81,9 +81,11 @@
     img {
     height: 2.5rem;
     }
-    .nav-burger {
+.nav-burger {
     border-radius: 0.25rem;
     border-width: 1px;
+    border-style: solid;
+    border-color: var(--app-bar-bg);
     display: -webkit-box;
     display: -ms-flexbox;
     display: -webkit-flex;
